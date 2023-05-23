@@ -6,7 +6,7 @@
       {{ end }}
       <br />
       {{ if .Site.Params.notByAI }}
-        <a href="https://notbyai.fyi">
+        <a href="https://notbyai.fyi" target="_blank">
           {{ partial "notbyai.html" . }}
         </a>
       {{ end }}
@@ -21,7 +21,7 @@
       {{ end }}
       {{ if not .Site.Params.hideCredits }}
         {{ if not .Site.Params.hideCopyright }} · {{ end }}
-        {{ i18n "powered_by" }} <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        {{ i18n "powered_by" }} <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank">Coder</a>.
       {{ end }}
       {{ if .Site.Params.commit }}
         {{ if .GitInfo }}
