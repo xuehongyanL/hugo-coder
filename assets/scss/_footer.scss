@@ -8,4 +8,15 @@
   a {
     color: $link-color;
   }
+
+  svg {
+    stroke: none;
+    fill: $fg-color;
+    margin-top: 0.2em;
+    scale: 1.05;
+
+    :first-child{
+      stroke: $fg-color;
+    }
+  }
 }

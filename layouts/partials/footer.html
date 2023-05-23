@@ -2,8 +2,15 @@
   <footer class="footer">
     <section class="container">
       {{ with .Site.Params.footerContent | safeHTML }}
-        <p>{{ . }}</p>
+        {{ . }}
       {{ end }}
+      <br />
+      {{ if .Site.Params.notByAI }}
+        <a href="https://notbyai.fyi">
+          {{ partial "notbyai.html" . }}
+        </a>
+      {{ end }}
+      <br />
       {{ if not .Site.Params.hideCopyright }}
         ©
         {{ if (and (.Site.Params.since) (lt .Site.Params.since now.Year)) }}

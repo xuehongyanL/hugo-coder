@@ -4,6 +4,17 @@
       color: $link-color-dark;
     }
   }
+
+  svg {
+    stroke: none;
+    fill: $fg-color-dark;
+    margin-top: 0.2em;
+    scale: 1.05;
+
+    :first-child{
+      stroke: $fg-color-dark;
+    }
+  }
 }
 
 body.colorscheme-dark {
