@@ -14,13 +14,20 @@
     {{ else }}
     <h2>{{ .Site.Params.info }}</h2>
     {{ end }}
-    
+
     {{ with .Site.Params.base }}
-      <i class="fa fa-building"></i>&nbsp;&thinsp;{{.school}}
+      {{ if .schoolurl }}
+        <i class="fa fa-building"></i>&thinsp;
+        <a href="">
+          {{.school}}
+        </a>
+      {{ else }}
+        <i class="fa fa-building"></i>&thinsp;{{.school}}
+      {{ end }}
       <br />
       <i class="fa fa-map-marker"></i>&nbsp;&thinsp;{{.city}}
     {{ end }}
-    
+
     {{ with .Site.Params.social }}
     <ul>
       {{ range sort . "weight" }}
