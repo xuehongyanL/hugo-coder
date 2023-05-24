@@ -197,21 +197,50 @@
       li {
         display: inline-block;
         position: relative;
+        vertical-align: middle;
 
         a {
           color: $fg-color;
           text-transform: uppercase;
-          margin-left: 1rem;
-          margin-right: 1rem;
-          font-size: 1.6rem;
+          margin-left: 0.15rem;
+          margin-right: 0.15rem;
+          font-size: 2.4rem;
 
           &:hover,
           &:focus {
-            color: $link-color;
+            color: $fg-color;
+            opacity: 50%;
           }
 
           @media only screen and (max-width: 768px) {
-            font-size: 1.4rem;
+            font-size: 2rem;
+          }
+
+          &.button {
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            appearance: button;
+
+            text-transform: none;
+            text-decoration: none;
+
+            $padding-x: 0.8rem;
+            $padding-y: 0.45rem;
+            padding-top: $padding-y;
+            padding-bottom: $padding-y;
+            padding-left: $padding-x;
+            padding-right: $padding-x;
+            border: solid 1px;
+            border-color: $fg-color;
+            border-radius: 0.5rem;
+            transform: translateY(-1px);
+
+            &:hover,
+            &:focus {
+              opacity: 90%;
+              color: $bg-color;
+              background-color: $fg-color;
+            }
           }
         }
       }
@@ -240,5 +269,21 @@
         font-size: 2.8rem;
       }
     }
+  }
+
+  .hidden-when-light, .hidden-when-dark {
+    vertical-align: super;
+    color: $fg-color;
+    text-decoration: none;
+    margin-left: -0.8rem;
+    font-size: 80%;
+  }
+
+  .hidden-when-light {
+    display: none;
+  }
+
+  .hidden-when-dark {
+    display: inline-block;
   }
 }

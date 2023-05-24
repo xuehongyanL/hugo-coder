@@ -1,4 +1,9 @@
-<h1>{{ .Site.Params.author }}</h1>
+<h1>{{ .Site.Params.author }}
+  <a id="dark-mode-toggle">
+    <i class="fa fa-moon-o fa-fw hidden-when-dark" aria-hidden="true"></i>
+    <i class="fa fa-lightbulb-o fa-fw hidden-when-light" aria-hidden="true"></i>
+  </a>
+</h1>
 {{ if reflect.IsSlice .Site.Params.info }}
 <h2>{{ range .Site.Params.info }}{{ . | markdownify }}<br>{{ end }}</h2>
 {{ else }}

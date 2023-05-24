@@ -28,10 +28,10 @@ iframe[src*=disqus] {
 }
 
 a {
-  font-weight: 500;
+  font-weight: 400;
   color: $link-color;
   text-decoration: none;
-  transition: all 0.25s ease-in;
+  transition: all 0.15s ease-in;
 
   &:focus,
   &:hover {
@@ -50,7 +50,7 @@ h4,
 h5,
 h6 {
   font-family: $font-family;
-  font-weight: 600;
+  font-weight: 500;
   color: $alt-fg-color;
   margin: 4rem 0 2.5rem 0;
 
@@ -135,7 +135,7 @@ h6 {
 
 b,
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .highlight {
@@ -261,7 +261,7 @@ figure {
 }
 
 .fas {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .float-right {
@@ -277,5 +277,5 @@ figure {
 }
 
 .fas {
-  font-weight: 900;
+  font-weight: 800;
 }
