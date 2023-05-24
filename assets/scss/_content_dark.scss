@@ -55,18 +55,6 @@
         }
       }
     }
-
-    .hidden-when-light, .hidden-when-dark {
-      color: $fg-color-dark;
-    }
-
-    .hidden-when-light {
-      display: inline-block;
-    }
-
-    .hidden-when-dark {
-      display: none;
-    }
   }
 }
 

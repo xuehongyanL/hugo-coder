@@ -15,11 +15,11 @@ body {
   font-family: $font-family;
   font-size: 1.8em;
   font-weight: 400;
-  line-height: 1.8em;
+  line-height: 1.7em;
 
   @media only screen and (max-width: 768px) {
     font-size: 1.6em;
-    line-height: 1.6em;
+    line-height: 1.5em;
   }
 }
 
@@ -40,7 +40,7 @@ a {
 }
 
 p {
-  margin: 2rem 0 2rem 0;
+  margin: 0.7rem 0 0.7rem 0;
 }
 
 h1,
@@ -52,7 +52,7 @@ h6 {
   font-family: $font-family;
   font-weight: 500;
   color: $alt-fg-color;
-  margin: 4rem 0 2.5rem 0;
+  margin: 1.5rem 0 1rem 0;
 
   &:hover .heading-link {
     visibility: visible;
@@ -278,4 +278,20 @@ figure {
 
 .fas {
   font-weight: 800;
+}
+
+.hidden-when-light, .hidden-when-dark {
+  vertical-align: super;
+  color: $fg-color;
+  text-decoration: none;
+  margin-left: -0.8rem;
+  font-size: 80%;
+}
+
+.hidden-when-light {
+  display: none;
+}
+
+.hidden-when-dark {
+  display: inline-block;
 }
