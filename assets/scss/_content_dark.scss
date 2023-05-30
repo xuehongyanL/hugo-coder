@@ -42,7 +42,7 @@
               }
 
               &.button {
-                border-color: $fg-color-dark;
+                border-color: #{$fg-color-dark}BF;
 
                 &:hover,
                 &:focus {

@@ -200,7 +200,7 @@
         vertical-align: middle;
 
         a {
-          color: $fg-color;
+          color: #{$fg-color}EE;
           text-transform: uppercase;
           margin-left: 0.15rem;
           margin-right: 0.15rem;
@@ -230,8 +230,8 @@
             padding-bottom: $padding-y;
             padding-left: $padding-x;
             padding-right: $padding-x;
-            border: solid 1px;
-            border-color: $fg-color;
+            border: solid 2px;
+            border-color: #{$fg-color}BF;
             border-radius: 0.5rem;
             transform: translateY(-1px);
 
