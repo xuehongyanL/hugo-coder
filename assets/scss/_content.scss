@@ -47,9 +47,14 @@
     }
 
     p {
-      text-align: justify;
+      text-align: start;
       text-justify: auto;
       hyphens: auto;
+
+      img {
+        margin: 0 auto;
+        display: block;
+      }
     }
   }
 
@@ -204,7 +209,8 @@
           text-transform: uppercase;
           margin-left: 0.15rem;
           margin-right: 0.15rem;
-          font-size: 2.4rem;
+          font-size: 2.0rem;
+          line-height: 2.5rem;
 
           &:hover,
           &:focus {
@@ -213,7 +219,8 @@
           }
 
           @media only screen and (max-width: 768px) {
-            font-size: 2rem;
+            font-size: 1.7rem;
+            line-height: 2.1rem;
           }
 
           &.button {
