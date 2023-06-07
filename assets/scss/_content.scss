@@ -56,6 +56,10 @@
         display: block;
       }
     }
+
+    p, ul, ol {
+      color: $lighter-text-color;
+    }
   }
 
   .post {

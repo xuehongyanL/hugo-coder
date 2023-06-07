@@ -4,20 +4,20 @@
       <a class="navigation-title" href="{{ .Site.BaseURL | relLangURL }}">
         {{ .Site.Title }}
       </a>
-      <a id="dark-mode-toggle">
-        <i class="fa fa-moon-o fa-fw hidden-when-dark" aria-hidden="true"></i>
-        <i class="fa fa-lightbulb-o fa-fw hidden-when-light" aria-hidden="true"></i>
-      </a>
+      {{ partial "dark-mode-toggle.html" . }}
       {{ if or .Site.Menus.main .Site.IsMultiLingual }}
         <input type="checkbox" id="menu-toggle" />
         <label class="menu-button float-right" for="menu-toggle">
           <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
         </label>
         <ul class="navigation-list">
+          {{ $currentPage := . }}
           {{ with .Site.Menus.main}}
             {{ range sort . }}
               <li class="navigation-item">
-                <a class="navigation-link" href="{{ index (apply (slice .URL) (.Params.urlFunc | default "relLangURL") ".") 0 }}">{{ .Name }}</a>
+                {{ $menu_item_url := .URL | relLangURL }}
+                {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
+                <a class="navigation-link no-hover {{ if eq $menu_item_url $page_url }}underline{{ end }}" href="{{ index (apply (slice .URL) (.Params.urlFunc | default "relLangURL") ".") 0 }}">{{ .Name }}</a>
               </li>
             {{ end }}
           {{ end }}

@@ -13,9 +13,9 @@ body {
   color: $fg-color;
   background-color: $bg-color;
   font-family: $font-family;
-  font-size: 1.8em;
+  font-size: 1.7em;
   font-weight: 400;
-  line-height: 1.7em;
+  line-height: 1.5em;
 
   @media only screen and (max-width: 768px) {
     font-size: 1.6em;
@@ -32,7 +32,9 @@ a {
   color: $link-color;
   text-decoration: none;
   transition: all 0.15s ease-in;
+}
 
+a:not(.no-hover) {
   &:focus,
   &:hover {
     text-decoration: underline;
@@ -294,4 +296,8 @@ figure {
 
 .hidden-when-dark {
   display: inline-block;
+}
+
+.underline {
+  border-bottom: 2px solid;
 }

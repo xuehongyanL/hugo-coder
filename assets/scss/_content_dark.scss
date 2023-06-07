@@ -55,6 +55,12 @@
         }
       }
     }
+
+    article {
+      p, ul, ol {
+        color: $darker-text-color-dark;
+      }
+    }
   }
 }
 
